@@ -487,6 +487,31 @@ body {
     box-shadow: 0 0 30px rgba(76, 175, 80, 0.6);
 }
 
+/* Game Dev floating icons */
+.floating-skill[data-skill="unity"]:hover {
+    background: rgba(255, 255, 255, 0.3);
+    border-color: rgba(255, 255, 255, 0.8);
+    box-shadow: 0 0 30px rgba(255, 255, 255, 0.6);
+}
+
+.floating-skill[data-skill="gamepad"]:hover {
+    background: rgba(155, 89, 182, 0.3);
+    border-color: rgba(155, 89, 182, 0.8);
+    box-shadow: 0 0 30px rgba(155, 89, 182, 0.6);
+}
+
+.floating-skill[data-skill="dice"]:hover {
+    background: rgba(231, 76, 60, 0.3);
+    border-color: rgba(231, 76, 60, 0.8);
+    box-shadow: 0 0 30px rgba(231, 76, 60, 0.6);
+}
+
+.floating-skill[data-skill="ghost"]:hover {
+    background: rgba(52, 152, 219, 0.3);
+    border-color: rgba(52, 152, 219, 0.8);
+    box-shadow: 0 0 30px rgba(52, 152, 219, 0.6);
+}
+
 .floating-skill:nth-child(12) {
     top: 10%;
     left: 20%;
@@ -634,6 +659,8 @@ body {
     display: flex;
     gap: 1rem;
     margin-bottom: 2rem;
+    flex-wrap: wrap;
+    align-items: center;
 }
 
 .btn {
@@ -900,6 +927,73 @@ section {
 .skill-item span {
     font-weight: 500;
     color: #22c55e;
+}
+
+/* Game Development Category Special Styling */
+.game-dev-category {
+    background: linear-gradient(135deg, rgba(155, 89, 182, 0.15) 0%, rgba(10, 10, 10, 0.8) 50%, rgba(231, 76, 60, 0.15) 100%);
+    border: 2px solid rgba(155, 89, 182, 0.4);
+    position: relative;
+    overflow: hidden;
+}
+
+.game-dev-category::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, 
+        transparent 30%, 
+        rgba(155, 89, 182, 0.05) 50%, 
+        transparent 70%);
+    animation: gameCategoryShine 4s ease-in-out infinite;
+}
+
+@keyframes gameCategoryShine {
+    0%, 100% { transform: translateX(-100%) rotate(45deg); }
+    50% { transform: translateX(100%) rotate(45deg); }
+}
+
+.game-dev-category:hover {
+    border-color: rgba(155, 89, 182, 0.8);
+    box-shadow: 0 0 30px rgba(155, 89, 182, 0.4), 0 0 60px rgba(231, 76, 60, 0.2);
+}
+
+.game-dev-category h3 {
+    color: #9b59b6;
+    text-shadow: 0 0 10px rgba(155, 89, 182, 0.5);
+}
+
+.game-dev-category h3 i {
+    margin-right: 0.5rem;
+    animation: gamepadPulse 2s ease-in-out infinite;
+}
+
+@keyframes gamepadPulse {
+    0%, 100% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+}
+
+.game-dev-category .skill-item {
+    background: rgba(155, 89, 182, 0.1);
+    border: 1px solid rgba(155, 89, 182, 0.3);
+    transition: all 0.3s ease;
+}
+
+.game-dev-category .skill-item:hover {
+    background: rgba(155, 89, 182, 0.2);
+    box-shadow: 0 0 20px rgba(155, 89, 182, 0.4);
+    transform: translateY(-3px);
+}
+
+.game-dev-category .skill-item i {
+    color: #9b59b6;
+}
+
+.game-dev-category .skill-item span {
+    color: #9b59b6;
 }
 
 /* Projects Section */
