@@ -227,15 +227,15 @@ document.querySelectorAll('.skill-item').forEach(item => {
     });
 });
 
-// Parallax effect for hero section
-window.addEventListener('scroll', () => {
-    const scrolled = window.pageYOffset;
-    const hero = document.querySelector('.hero');
-    if (hero) {
-        const rate = scrolled * -0.5;
-        hero.style.transform = `translateY(${rate}px)`;
-    }
-});
+// Parallax effect for hero section - DISABLED to prevent shaking
+// window.addEventListener('scroll', () => {
+//     const scrolled = window.pageYOffset;
+//     const hero = document.querySelector('.hero');
+//     if (hero) {
+//         const rate = scrolled * -0.5;
+//         hero.style.transform = `translateY(${rate}px)`;
+//     }
+// });
 
 // Loading animation
 window.addEventListener('load', () => {
